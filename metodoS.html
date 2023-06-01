@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"/>
+    <title>Método Simplex</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.0/normalize.css">
+  </head>
+
+  <body>
+    <header class="metodo">
+        <h1>MÉTODO SIMPLEX</h1>
+    </header>
+
+    <nav class="navBar">
+        <a href="metodoG.html">Método Gráfico</a>
+        <a href="metodoS.html">Método Simplex</a>
+    </nav>
+    <main class="contenedor sombra">
+        <br/>
+        <div class="contenido">
+            <form id="datos-problema" class="contRestricciones" method="post" name="form-dos-fases">
+                <p>
+                    <label class="" for="cantidad-variables">Cantidad de Variables:</label>
+                    <br />
+                    <input id="cantidad-variables" class="inputs" max="20" min="2" name="cantidad-variables" required="required" type="number" placeholder="Max. 20" aria-required="true"/>
+                </p>
+                <p>
+                    <label class="" for="cantidad-restricciones">Cantidad de Restricciones:</label>
+                    <br />
+                    <input id="cantidad-restricciones" class="inputs" max="50" min="1" name="cantidad-restricciones" placeholder="Max. 50" required="required" type="number" aria-required="true"/>
+                </p>
+                <button style="margin-top: 10px" id="boton-dos-fases" class="btnAction" type="submit">
+                    Generar Modelo
+                </button>
+                <button style="margin-top: 10px" type="reset" class="btnAction" id="reset-boton-principal">
+                    Limpiar
+                </button>
+            </form>
+        </div>
+        <div class="">
+            <form id="formulario-problema" class="" method="post" name="f1"></form>
+        </div>
+        <div id="ecuaciones" class=""></div>
+        <div id="resultados-simplex" class="" style="margin-top: 20px"></div>
+    </main>
+
+    
+    <script data-minify="1" type="text/javascript" 
+        src="https://www.plandemejora.com/wp-content/cache/min/1/wp-content/plugins/wp-shortcodes/src/js/fraction.js?ver=1671121482" 
+        id="fracciones-js" defer></script>
+    <script data-minify="1" type="text/javascript"
+        src="https://www.plandemejora.com/wp-content/cache/min/1/wp-content/plugins/wp-shortcodes/src/js/code.js?ver=1671121482"
+        id="encriptador-js" defer></script>
+    <script
+      type="text/javascript" 
+      src="script.js" id="simplexfree-js" defer></script>
+
+      <footer class="contenedor">
+        <p>Proyecto realizado por los alumnos del salon 202 de la Facultad de Ingenieria de la Universidad Autonoma de Sinaloa</p>
+    </footer>
+  </body>
+</html>

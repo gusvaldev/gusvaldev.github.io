@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.0/normalize.css">
+    <title>Metodo Grafico</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts.js"></script>
+
+</head>
+<body>
+    <header class="metodo">
+        <h1>MÉTODO GRÁFICO</h1>
+    </header>
+
+    <nav class="navBar">
+        <a href="metodoG.html">Método Gráfico</a>
+        <a href="metodoS.html">Método Simplex</a>
+    </nav>
+
+    <div class="opti contenedor">
+        <p>Metodo de optimización
+            <select class="combo" name="opti" id="opti">
+                <option value="Maxi">Maximizar</option>
+                <option value="Mini">Minimizar</option>
+            </select>
+        </p>
+    </div>
+
+    <main class="contenedor sombra">
+        <div class="funcionObj">
+            <h3>Funcion Objetivo</h3>
+            <div>
+                <p>
+                    Z =
+                    <input class="inputs" type="text" id="x" value="" onkeydown="return soloNumeros(event)">
+                    X + 
+                    <input class="inputs" type="text" id="y" value="" onkeydown="return soloNumeros(event)">
+                    Y
+                </p>
+    
+            </div>
+        </div>
+        
+        <h3>Sujeto a:</h3>
+        <div class="contenido">
+            <div class="contRestricciones">
+            <div class="restricciones" id="restricciones">
+                <div class="restriccion">
+                    <p>
+                        <input class="inputs" type="text" id="xRes1" value="" onkeydown="return soloNumeros(event)">
+                        X1
+                        <select class="combo" name="signo" id="signo1">
+                            <option value="mas">+</option>
+                            <option value="menos">-</option>
+                        </select>
+                        <input class="inputs" type="text" id="yRes1" onkeydown="return soloNumeros(event)">
+                        Y1
+                        <select class="combo" name="igualdad" id="igualdad1">
+                            <option value="mayorIgual">>=</option>
+                            <option value="menorIgual"><=</option>
+                        </select>
+                        <input class="inputs" type="text" id="zRes1" onkeydown="return soloNumeros(event)">
+                    </p>
+                </div>
+                <div class="restriccion">
+                    <p>
+                        <input class="inputs" type="text" id="xRes2" value="" onkeydown="return soloNumeros(event)">
+                        X2
+                        <select class="combo" name="signo" id="signo2">
+                            <option value="mas">+</option>
+                            <option value="menos">-</option>
+                        </select>
+                        <input class="inputs" type="text" id="yRes2" onkeydown="return soloNumeros(event)">
+                        Y2
+                        <select class="combo" name="igualdad" id="igualdad2">
+                            <option value="mayorIgual">>=</option>
+                            <option value="menorIgual"><=</option>
+                        </select>
+                        <input class="inputs" type="text" id="zRes2" onkeydown="return soloNumeros(event)">
+                    </p>
+                </div>
+            </div>
+            <p>X,Y >=0</p>
+            </div>
+
+            <div class="botones">
+                <input class="buttons" type="button" onclick="agregar()" value="+">
+                <input class="buttons" type="button" onclick="quitar()" value="-">
+                <input class="btnAction" type="button" onclick="graficar()" value="Graficar">
+            </div>
+        </div>
+
+        
+        
+
+
+        <div id="ggbApplet" style="margin: 0 auto;"></div>
+
+    </main>
+
+    <footer class="contenedor">
+        <p>Proyecto realizado por los alumnos del salon 202 de la Facultad de Ingenieria de la Universidad Autonoma de Sinaloa</p>
+    </footer>
+</body>
+</html>
